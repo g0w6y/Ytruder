@@ -2,7 +2,6 @@ import os
 import random
 import yt_dlp
 
-# Random User-Agents
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:110.0) Gecko/20100101 Firefox/110.0",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36",
@@ -10,9 +9,8 @@ USER_AGENTS = [
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36"
 ]
 
-# Tool Banner (FIGLET "Bloody" Font)
 def banner():
-    os.system("clear")  # Clear screen
+    os.system("clear")
     print("\033[91m" + """
 ▓██   ██▓▄▄▄█████▓ ██▀███   █    ██ ▓█████▄ ▓█████  ██▀███
  ▒██  ██▒▓  ██▒ ▓▒▓██ ▒ ██▒ ██  ▓██▒▒██▀ ██▌▓█   ▀ ▓██ ▒ ██▒
@@ -27,17 +25,15 @@ def banner():
     """ + "\033[0m")
     print("\n      \033[91mAuthor: g0w6y\033[0m")
 
-# Ensure output directory exists
 OUTPUT_DIR = "output"
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
 
-# Download Function
+
 def download_youtube_video(url, mode):
     try:
         user_agent = random.choice(USER_AGENTS)
 
-        # Define the format based on mode
         format_select = {
             "video": "bestvideo+bestaudio/best",
             "shorts": "bestvideo+bestaudio/best",
@@ -45,7 +41,6 @@ def download_youtube_video(url, mode):
             "audio": "bestaudio"
         }.get(mode, "bestvideo+bestaudio/best")
 
-        # Define Postprocessors
         postprocessors = [
             {'key': 'FFmpegMerger'}
         ] if mode != "audio" else [
@@ -57,10 +52,10 @@ def download_youtube_video(url, mode):
             'merge_output_format': 'mp4',
             'format': format_select,
             'postprocessors': postprocessors,
-            'http_headers': {'User-Agent': user_agent},  # Set random User-Agent
-            'noprogress': True,  # Reduce unnecessary progress output
+            'http_headers': {'User-Agent': user_agent},
+            'noprogress': True, 
             'quiet': False,
-            'noplaylist': True  # Prevent downloading playlists
+            'noplaylist': True 
         }
 
         with yt_dlp.YoutubeDL(options) as ydl:
@@ -71,7 +66,6 @@ def download_youtube_video(url, mode):
     except Exception as e:
         print(f"\n\033[91mError: {e}\033[0m\n")
 
-# Main Menu
 def main():
     banner()
     while True:
@@ -111,3 +105,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
