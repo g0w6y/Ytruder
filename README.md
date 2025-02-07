@@ -2,10 +2,10 @@
 # **Ytruder - YouTube Video & Audio Downloader**  
 
 **Ytruder** is a powerful YouTube downloader tool built using **yt-dlp**. It supports downloading:  
-✅ Live Streams  
-✅ Normal Videos  
-✅ YouTube Shorts  
-✅ Audio Only  
+• Live Streams  
+• Normal Videos  
+• YouTube Shorts  
+• Audio Only  
 
 ## **Features**  
 - Random **User-Agent Spoofing** for better request handling.  
@@ -39,6 +39,10 @@ You'll also need **FFmpeg** for processing media files:
 ---
 
 ## **Usage**  
+
+```sh
+git clone https://github.com/g0w6y/Ytruder.git
+```
 
 ### **Run the script**  
 ```sh
