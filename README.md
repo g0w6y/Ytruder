@@ -1,7 +1,7 @@
 
 # **Ytruder - YouTube Video & Audio Downloader**  
 
-**Ytruder** is a powerful YouTube downloader tool built using **yt-dlp**. It supports downloading:  
+**Ytruder** is a YouTube downloader tool built using **yt-dlp**. It supports downloading:  
 • Live Streams  
 • Normal Videos  
 • YouTube Shorts  
@@ -20,9 +20,9 @@
 ### **1. Install Dependencies**  
 Make sure you have **Python 3** installed. Then, install `yt-dlp`:  
 
-```sh
-pip install yt-dlp
-```
+   ```sh
+   pip install yt-dlp
+   ```
 
 You'll also need **FFmpeg** for processing media files:  
 
