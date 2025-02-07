@@ -81,9 +81,9 @@ Downloading Audio Only...
 ---
 
 ## **Troubleshooting**  
-🔴 **"yt-dlp command not found"** → Run `pip install --upgrade yt-dlp`  
-🔴 **FFmpeg missing error** → Install FFmpeg as shown above.  
-🔴 **Error downloading video?** → Try another User-Agent or check the URL.  
+• **"yt-dlp command not found"** → Run `pip install --upgrade yt-dlp`  
+• **FFmpeg missing error** → Install FFmpeg as shown above.  
+• **Error downloading video?** → Try another User-Agent or check the URL.  
 
 ---
 
